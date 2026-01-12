@@ -1,0 +1,2 @@
+# flutter_tencent_tsec_sdk
+腾讯云T-Sec设备安全SDK的Flutter插件，仅支持安卓和iOS
