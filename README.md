@@ -18,9 +18,9 @@ final tsecSdk = TencentTsecSdk();
 final bool success = await tsecSdk.initialize(channel: [渠道号]);
 if (success) {
   final version = await tsecSdk.getPlatformVersion();
-  print(version);
+  debugPrint(version);
 } else {
-  print('初始化失败');
+  debugPrint('初始化失败');
 }
 ```
 
