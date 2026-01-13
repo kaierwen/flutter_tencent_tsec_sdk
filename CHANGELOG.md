@@ -1,3 +1,3 @@
 ## 0.0.1
+- 初始版本, 功能有：初始化SDK、获取设备Token（仅支持安卓）
 
-* TODO: Describe initial release.
