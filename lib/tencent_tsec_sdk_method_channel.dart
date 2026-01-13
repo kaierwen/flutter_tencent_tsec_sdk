@@ -18,10 +18,13 @@ class MethodChannelFlutterTencentTsecSdk extends TencentTsecSdkPlatform {
   }
 
   @override
-  Future<bool> initialize({required int channel}) async {
+  Future<bool> initialize({required int channel, bool enableLog = false}) async {
     final result = await methodChannel.invokeMethod<bool>(
       'initialize',
-      <String, dynamic>{'channel': channel},
+      <String, dynamic>{
+        'channel': channel,
+        'enableLog': enableLog,
+      },
     );
     return result ?? false;
   }

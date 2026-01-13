@@ -33,7 +33,10 @@ class _MyAppState extends State<MyApp> {
     try {
       // 调用原生方法初始化SDK，channel根据腾讯云后台获取，
       // 参考[快速入门 - 步骤5：生成 SDK_channel](https://cloud.tencent.com/document/product/1628/79610#cee40935-2ef8-4500-bb4e-f6c0a5742c34)
-      final bool success = await _tsecSdk.initialize(channel: 1);
+      final bool success = await _tsecSdk.initialize(
+        channel: 1,
+        enableLog: true,
+      );
       if (success) {
         final version = await _tsecSdk.getPlatformVersion();
         setState(() {

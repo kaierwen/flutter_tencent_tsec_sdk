@@ -28,7 +28,7 @@ abstract class TencentTsecSdkPlatform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<bool> initialize({required int channel}) {
+  Future<bool> initialize({required int channel, bool enableLog = false}) {
     throw UnimplementedError('initialize() has not been implemented.');
   }
 

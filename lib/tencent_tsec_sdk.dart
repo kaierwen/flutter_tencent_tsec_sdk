@@ -11,9 +11,13 @@ class TencentTsecSdk {
 
   /// 初始化SDK
   /// @param channel 渠道号, 参考[快速入门 - 步骤5：生成 SDK_channel](https://cloud.tencent.com/document/product/1628/79610#cee40935-2ef8-4500-bb4e-f6c0a5742c34)
+  /// @param enableLog 是否开启日志, 默认为 false
   /// @return 初始化是否成功
-  Future<bool> initialize({required int channel}) {
-    return TencentTsecSdkPlatform.instance.initialize(channel: channel);
+  Future<bool> initialize({required int channel, bool enableLog = false}) {
+    return TencentTsecSdkPlatform.instance.initialize(
+      channel: channel,
+      enableLog: enableLog,
+    );
   }
 
   /// 获取设备Token

@@ -14,7 +14,7 @@ import java.util.concurrent.Future
  * @param context
  * @param enableLog 是否开启日志
  */
-class TuringSdkWrapper(private val context: Context, private val enableLog: Boolean = true) {
+class TuringSdkWrapper(private val context: Context, private val enableLog: Boolean = false) {
     private val TAG = "TuringSdkWrapper"
     private var isInit = false
 
