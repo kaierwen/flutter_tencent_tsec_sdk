@@ -16,9 +16,18 @@ A new Flutter plugin project.
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '13.0'
+  
+  # 添加 TuringShield.xcframework
+  s.vendored_frameworks = 'TuringShield.xcframework'
+  s.preserve_paths = 'TuringShield.xcframework'
 
   # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.pod_target_xcconfig = { 
+    'DEFINES_MODULE' => 'YES', 
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386',
+    'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_TARGET_SRCROOT}/TuringShield.xcframework/ios-arm64_arm64e_armv7/Headers"',
+    'OTHER_LDFLAGS' => '$(inherited) -ObjC'
+  }
   s.swift_version = '5.0'
 
   # If your plugin requires a privacy manifest, for example if it uses any
